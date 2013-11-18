@@ -251,7 +251,7 @@
         CGFloat lightLineWidth = 0.5f;
         
         UIColor *darkLineColor = [UIColor colorWithWhite:0.0f alpha:0.4f];
-        UIColor *lightLineColor = [UIColor colorWithWhite:0.5 alpha:0.6f];
+        UIColor *lightLineColor = [UIColor colorWithWhite:0.5 alpha:0.4f];
         
         [self draWLineFromPoint:CGPointMake(0, darkLineWidth/2)
                         toPoint:CGPointMake(self.bounds.size.width, darkLineWidth/2)
