@@ -1,0 +1,518 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		78A7C692183A05980075A7DD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78A7C691183A05980075A7DD /* Foundation.framework */; };
+		78A7C694183A05980075A7DD /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78A7C693183A05980075A7DD /* CoreGraphics.framework */; };
+		78A7C696183A05980075A7DD /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78A7C695183A05980075A7DD /* UIKit.framework */; };
+		78A7C6B1183A05980075A7DD /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78A7C6B0183A05980075A7DD /* XCTest.framework */; };
+		78A7C6B2183A05980075A7DD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78A7C691183A05980075A7DD /* Foundation.framework */; };
+		78A7C6B3183A05980075A7DD /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78A7C695183A05980075A7DD /* UIKit.framework */; };
+		78A7C6CA183A06B60075A7DD /* RKTabView.m in Sources */ = {isa = PBXBuildFile; fileRef = 78A7C6C6183A06B60075A7DD /* RKTabView.m */; };
+		78A7C6CB183A06B60075A7DD /* RKTabItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 78A7C6C8183A06B60075A7DD /* RKTabItem.m */; };
+		78A7C6DC183A06D80075A7DD /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 78A7C6CF183A06D70075A7DD /* InfoPlist.strings */; };
+		78A7C6DD183A06D80075A7DD /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 78A7C6D1183A06D70075A7DD /* Images.xcassets */; };
+		78A7C6DE183A06D80075A7DD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 78A7C6D2183A06D70075A7DD /* main.m */; };
+		78A7C6E0183A06D80075A7DD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 78A7C6D7183A06D70075A7DD /* AppDelegate.m */; };
+		78A7C6E1183A06D80075A7DD /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 78A7C6D9183A06D70075A7DD /* ViewController.m */; };
+		78A7C6F3183A07250075A7DD /* blurred_background.png in Resources */ = {isa = PBXBuildFile; fileRef = 78A7C6E2183A07250075A7DD /* blurred_background.png */; };
+		78A7C6F4183A07250075A7DD /* calendar-disabled.png in Resources */ = {isa = PBXBuildFile; fileRef = 78A7C6E3183A07250075A7DD /* calendar-disabled.png */; };
+		78A7C6F5183A07250075A7DD /* calendar-enabled.png in Resources */ = {isa = PBXBuildFile; fileRef = 78A7C6E4183A07250075A7DD /* calendar-enabled.png */; };
+		78A7C6F6183A07250075A7DD /* calendar-disabled@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 78A7C6E5183A07250075A7DD /* calendar-disabled@2x.png */; };
+		78A7C6F7183A07250075A7DD /* calendar-enabled@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 78A7C6E6183A07250075A7DD /* calendar-enabled@2x.png */; };
+		78A7C6F8183A07250075A7DD /* circle-enabled.png in Resources */ = {isa = PBXBuildFile; fileRef = 78A7C6E7183A07250075A7DD /* circle-enabled.png */; };
+		78A7C6F9183A07250075A7DD /* circle-disabled.png in Resources */ = {isa = PBXBuildFile; fileRef = 78A7C6E8183A07250075A7DD /* circle-disabled.png */; };
+		78A7C6FA183A07250075A7DD /* circle-enabled@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 78A7C6E9183A07250075A7DD /* circle-enabled@2x.png */; };
+		78A7C6FB183A07250075A7DD /* circle-disabled@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 78A7C6EA183A07250075A7DD /* circle-disabled@2x.png */; };
+		78A7C6FC183A07250075A7DD /* photo-disabled.png in Resources */ = {isa = PBXBuildFile; fileRef = 78A7C6EB183A07250075A7DD /* photo-disabled.png */; };
+		78A7C6FD183A07250075A7DD /* photo-enabled.png in Resources */ = {isa = PBXBuildFile; fileRef = 78A7C6EC183A07250075A7DD /* photo-enabled.png */; };
+		78A7C6FE183A07250075A7DD /* photo-enabled@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 78A7C6ED183A07250075A7DD /* photo-enabled@2x.png */; };
+		78A7C6FF183A07250075A7DD /* photo-disabled@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 78A7C6EE183A07250075A7DD /* photo-disabled@2x.png */; };
+		78A7C700183A07250075A7DD /* text-book-disabled.png in Resources */ = {isa = PBXBuildFile; fileRef = 78A7C6EF183A07250075A7DD /* text-book-disabled.png */; };
+		78A7C701183A07250075A7DD /* text-book-enabled.png in Resources */ = {isa = PBXBuildFile; fileRef = 78A7C6F0183A07250075A7DD /* text-book-enabled.png */; };
+		78A7C702183A07250075A7DD /* text-book-enabled@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 78A7C6F1183A07250075A7DD /* text-book-enabled@2x.png */; };
+		78A7C703183A07250075A7DD /* text-book-disabled@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 78A7C6F2183A07250075A7DD /* text-book-disabled@2x.png */; };
+		78A7C705183A0D430075A7DD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 78A7C704183A0D430075A7DD /* Main.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		78A7C6B4183A05980075A7DD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 78A7C686183A05980075A7DD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 78A7C68D183A05980075A7DD;
+			remoteInfo = RKTabView;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		78A7C68E183A05980075A7DD /* RKTabView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RKTabView.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		78A7C691183A05980075A7DD /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		78A7C693183A05980075A7DD /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		78A7C695183A05980075A7DD /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		78A7C6AF183A05980075A7DD /* RKTabViewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RKTabViewTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		78A7C6B0183A05980075A7DD /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		78A7C6C6183A06B60075A7DD /* RKTabView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RKTabView.m; sourceTree = "<group>"; };
+		78A7C6C7183A06B60075A7DD /* RKTabItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RKTabItem.h; sourceTree = "<group>"; };
+		78A7C6C8183A06B60075A7DD /* RKTabItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RKTabItem.m; sourceTree = "<group>"; };
+		78A7C6C9183A06B60075A7DD /* RKTabView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RKTabView.h; sourceTree = "<group>"; };
+		78A7C6D0183A06D70075A7DD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		78A7C6D1183A06D70075A7DD /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		78A7C6D2183A06D70075A7DD /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		78A7C6D3183A06D70075A7DD /* RKTabView-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "RKTabView-Info.plist"; sourceTree = "<group>"; };
+		78A7C6D4183A06D70075A7DD /* RKTabView-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "RKTabView-Prefix.pch"; sourceTree = "<group>"; };
+		78A7C6D6183A06D70075A7DD /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		78A7C6D7183A06D70075A7DD /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		78A7C6D8183A06D70075A7DD /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		78A7C6D9183A06D70075A7DD /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		78A7C6E2183A07250075A7DD /* blurred_background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blurred_background.png; sourceTree = "<group>"; };
+		78A7C6E3183A07250075A7DD /* calendar-disabled.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "calendar-disabled.png"; sourceTree = "<group>"; };
+		78A7C6E4183A07250075A7DD /* calendar-enabled.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "calendar-enabled.png"; sourceTree = "<group>"; };
+		78A7C6E5183A07250075A7DD /* calendar-disabled@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "calendar-disabled@2x.png"; sourceTree = "<group>"; };
+		78A7C6E6183A07250075A7DD /* calendar-enabled@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "calendar-enabled@2x.png"; sourceTree = "<group>"; };
+		78A7C6E7183A07250075A7DD /* circle-enabled.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "circle-enabled.png"; sourceTree = "<group>"; };
+		78A7C6E8183A07250075A7DD /* circle-disabled.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "circle-disabled.png"; sourceTree = "<group>"; };
+		78A7C6E9183A07250075A7DD /* circle-enabled@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "circle-enabled@2x.png"; sourceTree = "<group>"; };
+		78A7C6EA183A07250075A7DD /* circle-disabled@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "circle-disabled@2x.png"; sourceTree = "<group>"; };
+		78A7C6EB183A07250075A7DD /* photo-disabled.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "photo-disabled.png"; sourceTree = "<group>"; };
+		78A7C6EC183A07250075A7DD /* photo-enabled.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "photo-enabled.png"; sourceTree = "<group>"; };
+		78A7C6ED183A07250075A7DD /* photo-enabled@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "photo-enabled@2x.png"; sourceTree = "<group>"; };
+		78A7C6EE183A07250075A7DD /* photo-disabled@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "photo-disabled@2x.png"; sourceTree = "<group>"; };
+		78A7C6EF183A07250075A7DD /* text-book-disabled.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "text-book-disabled.png"; sourceTree = "<group>"; };
+		78A7C6F0183A07250075A7DD /* text-book-enabled.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "text-book-enabled.png"; sourceTree = "<group>"; };
+		78A7C6F1183A07250075A7DD /* text-book-enabled@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "text-book-enabled@2x.png"; sourceTree = "<group>"; };
+		78A7C6F2183A07250075A7DD /* text-book-disabled@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "text-book-disabled@2x.png"; sourceTree = "<group>"; };
+		78A7C704183A0D430075A7DD /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		78A7C68B183A05980075A7DD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				78A7C694183A05980075A7DD /* CoreGraphics.framework in Frameworks */,
+				78A7C696183A05980075A7DD /* UIKit.framework in Frameworks */,
+				78A7C692183A05980075A7DD /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		78A7C6AC183A05980075A7DD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				78A7C6B1183A05980075A7DD /* XCTest.framework in Frameworks */,
+				78A7C6B3183A05980075A7DD /* UIKit.framework in Frameworks */,
+				78A7C6B2183A05980075A7DD /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		78A7C685183A05980075A7DD = {
+			isa = PBXGroup;
+			children = (
+				78A7C697183A05980075A7DD /* RKTabView */,
+				78A7C6D5183A06D70075A7DD /* Classes */,
+				78A7C6DA183A06D70075A7DD /* Resources */,
+				78A7C6CC183A06D70075A7DD /* Supporting files */,
+				78A7C690183A05980075A7DD /* Frameworks */,
+				78A7C68F183A05980075A7DD /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		78A7C68F183A05980075A7DD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				78A7C68E183A05980075A7DD /* RKTabView.app */,
+				78A7C6AF183A05980075A7DD /* RKTabViewTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		78A7C690183A05980075A7DD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				78A7C691183A05980075A7DD /* Foundation.framework */,
+				78A7C693183A05980075A7DD /* CoreGraphics.framework */,
+				78A7C695183A05980075A7DD /* UIKit.framework */,
+				78A7C6B0183A05980075A7DD /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		78A7C697183A05980075A7DD /* RKTabView */ = {
+			isa = PBXGroup;
+			children = (
+				78A7C6C6183A06B60075A7DD /* RKTabView.m */,
+				78A7C6C7183A06B60075A7DD /* RKTabItem.h */,
+				78A7C6C8183A06B60075A7DD /* RKTabItem.m */,
+				78A7C6C9183A06B60075A7DD /* RKTabView.h */,
+			);
+			path = RKTabView;
+			sourceTree = "<group>";
+		};
+		78A7C6CC183A06D70075A7DD /* Supporting files */ = {
+			isa = PBXGroup;
+			children = (
+				78A7C6CF183A06D70075A7DD /* InfoPlist.strings */,
+				78A7C6D1183A06D70075A7DD /* Images.xcassets */,
+				78A7C6D2183A06D70075A7DD /* main.m */,
+				78A7C6D3183A06D70075A7DD /* RKTabView-Info.plist */,
+				78A7C6D4183A06D70075A7DD /* RKTabView-Prefix.pch */,
+				78A7C704183A0D430075A7DD /* Main.storyboard */,
+			);
+			path = "Supporting files";
+			sourceTree = "<group>";
+		};
+		78A7C6D5183A06D70075A7DD /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				78A7C6D6183A06D70075A7DD /* AppDelegate.h */,
+				78A7C6D7183A06D70075A7DD /* AppDelegate.m */,
+				78A7C6D8183A06D70075A7DD /* ViewController.h */,
+				78A7C6D9183A06D70075A7DD /* ViewController.m */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		78A7C6DA183A06D70075A7DD /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				78A7C6E2183A07250075A7DD /* blurred_background.png */,
+				78A7C6E3183A07250075A7DD /* calendar-disabled.png */,
+				78A7C6E4183A07250075A7DD /* calendar-enabled.png */,
+				78A7C6E5183A07250075A7DD /* calendar-disabled@2x.png */,
+				78A7C6E6183A07250075A7DD /* calendar-enabled@2x.png */,
+				78A7C6E7183A07250075A7DD /* circle-enabled.png */,
+				78A7C6E8183A07250075A7DD /* circle-disabled.png */,
+				78A7C6E9183A07250075A7DD /* circle-enabled@2x.png */,
+				78A7C6EA183A07250075A7DD /* circle-disabled@2x.png */,
+				78A7C6EB183A07250075A7DD /* photo-disabled.png */,
+				78A7C6EC183A07250075A7DD /* photo-enabled.png */,
+				78A7C6ED183A07250075A7DD /* photo-enabled@2x.png */,
+				78A7C6EE183A07250075A7DD /* photo-disabled@2x.png */,
+				78A7C6EF183A07250075A7DD /* text-book-disabled.png */,
+				78A7C6F0183A07250075A7DD /* text-book-enabled.png */,
+				78A7C6F1183A07250075A7DD /* text-book-enabled@2x.png */,
+				78A7C6F2183A07250075A7DD /* text-book-disabled@2x.png */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		78A7C68D183A05980075A7DD /* RKTabView */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 78A7C6C0183A05980075A7DD /* Build configuration list for PBXNativeTarget "RKTabView" */;
+			buildPhases = (
+				78A7C68A183A05980075A7DD /* Sources */,
+				78A7C68B183A05980075A7DD /* Frameworks */,
+				78A7C68C183A05980075A7DD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RKTabView;
+			productName = RKTabView;
+			productReference = 78A7C68E183A05980075A7DD /* RKTabView.app */;
+			productType = "com.apple.product-type.application";
+		};
+		78A7C6AE183A05980075A7DD /* RKTabViewTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 78A7C6C3183A05980075A7DD /* Build configuration list for PBXNativeTarget "RKTabViewTests" */;
+			buildPhases = (
+				78A7C6AB183A05980075A7DD /* Sources */,
+				78A7C6AC183A05980075A7DD /* Frameworks */,
+				78A7C6AD183A05980075A7DD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				78A7C6B5183A05980075A7DD /* PBXTargetDependency */,
+			);
+			name = RKTabViewTests;
+			productName = RKTabViewTests;
+			productReference = 78A7C6AF183A05980075A7DD /* RKTabViewTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		78A7C686183A05980075A7DD /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = "Rafael Kayumov";
+			};
+			buildConfigurationList = 78A7C689183A05980075A7DD /* Build configuration list for PBXProject "RKTabView" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 78A7C685183A05980075A7DD;
+			productRefGroup = 78A7C68F183A05980075A7DD /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				78A7C68D183A05980075A7DD /* RKTabView */,
+				78A7C6AE183A05980075A7DD /* RKTabViewTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		78A7C68C183A05980075A7DD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				78A7C6DD183A06D80075A7DD /* Images.xcassets in Resources */,
+				78A7C700183A07250075A7DD /* text-book-disabled.png in Resources */,
+				78A7C6F4183A07250075A7DD /* calendar-disabled.png in Resources */,
+				78A7C6FD183A07250075A7DD /* photo-enabled.png in Resources */,
+				78A7C6FE183A07250075A7DD /* photo-enabled@2x.png in Resources */,
+				78A7C6FF183A07250075A7DD /* photo-disabled@2x.png in Resources */,
+				78A7C6FA183A07250075A7DD /* circle-enabled@2x.png in Resources */,
+				78A7C703183A07250075A7DD /* text-book-disabled@2x.png in Resources */,
+				78A7C6F7183A07250075A7DD /* calendar-enabled@2x.png in Resources */,
+				78A7C6F6183A07250075A7DD /* calendar-disabled@2x.png in Resources */,
+				78A7C6F5183A07250075A7DD /* calendar-enabled.png in Resources */,
+				78A7C705183A0D430075A7DD /* Main.storyboard in Resources */,
+				78A7C6FB183A07250075A7DD /* circle-disabled@2x.png in Resources */,
+				78A7C6F3183A07250075A7DD /* blurred_background.png in Resources */,
+				78A7C6FC183A07250075A7DD /* photo-disabled.png in Resources */,
+				78A7C701183A07250075A7DD /* text-book-enabled.png in Resources */,
+				78A7C6F9183A07250075A7DD /* circle-disabled.png in Resources */,
+				78A7C6DC183A06D80075A7DD /* InfoPlist.strings in Resources */,
+				78A7C702183A07250075A7DD /* text-book-enabled@2x.png in Resources */,
+				78A7C6F8183A07250075A7DD /* circle-enabled.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		78A7C6AD183A05980075A7DD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		78A7C68A183A05980075A7DD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				78A7C6E0183A06D80075A7DD /* AppDelegate.m in Sources */,
+				78A7C6CA183A06B60075A7DD /* RKTabView.m in Sources */,
+				78A7C6DE183A06D80075A7DD /* main.m in Sources */,
+				78A7C6CB183A06B60075A7DD /* RKTabItem.m in Sources */,
+				78A7C6E1183A06D80075A7DD /* ViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		78A7C6AB183A05980075A7DD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		78A7C6B5183A05980075A7DD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 78A7C68D183A05980075A7DD /* RKTabView */;
+			targetProxy = 78A7C6B4183A05980075A7DD /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		78A7C6CF183A06D70075A7DD /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				78A7C6D0183A06D70075A7DD /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		78A7C6BE183A05980075A7DD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		78A7C6BF183A05980075A7DD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		78A7C6C1183A05980075A7DD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Supporting files/RKTabView-Prefix.pch";
+				INFOPLIST_FILE = "$(SRCROOT)/Supporting files/RKTabView-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		78A7C6C2183A05980075A7DD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Supporting files/RKTabView-Prefix.pch";
+				INFOPLIST_FILE = "$(SRCROOT)/Supporting files/RKTabView-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		78A7C6C4183A05980075A7DD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "RKTabView/RKTabView-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "RKTabViewTests/RKTabViewTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		78A7C6C5183A05980075A7DD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "RKTabView/RKTabView-Prefix.pch";
+				INFOPLIST_FILE = "RKTabViewTests/RKTabViewTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		78A7C689183A05980075A7DD /* Build configuration list for PBXProject "RKTabView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				78A7C6BE183A05980075A7DD /* Debug */,
+				78A7C6BF183A05980075A7DD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		78A7C6C0183A05980075A7DD /* Build configuration list for PBXNativeTarget "RKTabView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				78A7C6C1183A05980075A7DD /* Debug */,
+				78A7C6C2183A05980075A7DD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		78A7C6C3183A05980075A7DD /* Build configuration list for PBXNativeTarget "RKTabViewTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				78A7C6C4183A05980075A7DD /* Debug */,
+				78A7C6C5183A05980075A7DD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 78A7C686183A05980075A7DD /* Project object */;
+}
