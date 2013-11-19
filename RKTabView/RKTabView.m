@@ -1,5 +1,5 @@
 //  Created by Rafael Kayumov (RealPoc).
-//  Copyright (c) 2013 Rafael Kayumov. All rights reserved.
+//  Copyright (c) 2013 Rafael Kayumov. License: MIT.
 
 #import "RKTabView.h"
 #import "RkTabItem.h"
@@ -38,11 +38,30 @@
     [self buildUI];
 }
 
+- (void)setHorizontalInsets:(HorizontalEdgeInsets)horizontalInsets {
+    _horizontalInsets = horizontalInsets;
+    [self buildUI];
+}
+
 - (NSMutableArray *)tabViews {
     if (!_tabViews) {
         _tabViews = [[NSMutableArray alloc] init];
     }
     return _tabViews;
+}
+
+- (UIFont *)titlesFont {
+    if (!_titlesFont) {
+        _titlesFont = [UIFont systemFontOfSize:9];
+    }
+    return _titlesFont;
+}
+
+- (UIColor *)titleColor {
+    if (!_titleColor) {
+        _titleColor = [UIColor lightGrayColor];
+    }
+    return _titleColor;
 }
 
 #pragma mark - Private
@@ -137,7 +156,8 @@
 }
 
 - (CGFloat)tabItemWidth {
-    return self.tabItems.count > 0 ? self.frame.size.width/self.tabItems.count : self.frame.size.width;
+    CGFloat restrictedWidth = self.frame.size.width - self.horizontalInsets.left - self.horizontalInsets.right;
+    return self.tabItems.count > 0 ? restrictedWidth/self.tabItems.count : restrictedWidth;
 }
 
 - (CGFloat)tabItemHeight {
@@ -155,7 +175,7 @@
 - (CGRect)frameForTab:(RKTabItem *)tabItem {
     CGFloat width  = [self tabItemWidth];
     CGFloat height = [self tabItemHeight];
-    CGFloat x = [self indexOfTab:tabItem] * width;
+    CGFloat x = self.horizontalInsets.left + [self indexOfTab:tabItem] * width;
     return CGRectMake(x, 0, width, height);
 }
 
@@ -167,6 +187,38 @@
         }
     }
     
+    //Title
+    UILabel *titleLabel = nil;
+    CGSize titleSize;
+    if (tabItem.title.length != 0) {
+        titleLabel = [[UILabel alloc] init];
+        titleLabel.numberOfLines = 2;
+        titleLabel.lineBreakMode = NSLineBreakByWordWrapping;
+        titleLabel.textAlignment = NSTextAlignmentCenter;
+        titleLabel.adjustsLetterSpacingToFitWidth = YES;
+        titleLabel.autoresizingMask = UIViewAutoresizingFlexibleRightMargin | UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleWidth;
+        
+        UIFont *font = nil;
+        if (tabItem.font) {
+            font = tabItem.font;
+        } else if (!tabItem.font && self.titlesFont) {
+            font = self.titlesFont;
+        }
+        titleLabel.font = font;
+        
+        UIColor *textColor = nil;
+        if (tabItem.titleColor) {
+            textColor = tabItem.titleColor;
+        } else if (!tabItem.titleColor && self.titleColor) {
+            textColor = self.titleColor;
+        }
+        titleLabel.textColor = textColor;
+        
+        titleSize = [tabItem.title sizeWithFont:titleLabel.font constrainedToSize:CGSizeMake(tab.bounds.size.width, MAXFLOAT) lineBreakMode:NSLineBreakByWordWrapping];
+        titleLabel.text = tabItem.title;
+    }
+    
+    //Image/button
     id interfaceElement = nil;
     
     if (tabItem.tabType == TabTypeButton) {
@@ -176,8 +228,18 @@
     } else {
         interfaceElement = [[UIImageView alloc] initWithImage:tabItem.imageForCurrentState];
     }
-    ((UIView *)interfaceElement).center = CGPointMake(tab.bounds.size.width/2, tab.bounds.size.height/2);
     ((UIView *)interfaceElement).autoresizingMask = UIViewAutoresizingFlexibleTopMargin | UIViewAutoresizingFlexibleBottomMargin | UIViewAutoresizingFlexibleRightMargin | UIViewAutoresizingFlexibleLeftMargin;
+    
+    //Subviews frames
+    if (titleLabel) {
+        CGFloat wholeGapHeight = tab.bounds.size.height - ((UIView *)interfaceElement).bounds.size.height - titleSize.height;
+        titleLabel.frame = CGRectMake(tab.bounds.size.width/2 - titleSize.width/2, wholeGapHeight*2/3+((UIView *)interfaceElement).bounds.size.height, titleSize.width+2, titleSize.height+2);
+        ((UIView *)interfaceElement).frame = CGRectMake(tab.bounds.size.width/2 - ((UIView *)interfaceElement).bounds.size.width/2, wholeGapHeight/3, ((UIView *)interfaceElement).bounds.size.width, ((UIView *)interfaceElement).bounds.size.height);
+        [tab addSubview:titleLabel];
+    } else {
+        ((UIView *)interfaceElement).center = CGPointMake(tab.bounds.size.width/2, tab.bounds.size.height/2);
+    }
+    
     [tab addSubview:((UIView *)interfaceElement)];
     
     //backgroundColor
@@ -187,6 +249,19 @@
         } else {
             [tab viewWithTag:DARKER_BACKGROUND_VIEW_TAG].backgroundColor = [UIColor clearColor];
         }
+    }
+    
+    //selected tab background color
+    if (tabItem.tabState == TabStateEnabled) {
+        
+        //Apply tabItem selecred background color. If it is nil then apply tabview selected background color (if not nil).
+        if (tabItem.selectedBackgroundColor) {
+            tab.backgroundColor = tabItem.selectedBackgroundColor;
+        } else if (!tabItem.selectedBackgroundColor && self.selectedTabBackgrondColor) {
+            tab.backgroundColor = self.selectedTabBackgrondColor;
+        }
+    } else {
+        tab.backgroundColor = [UIColor clearColor];
     }
 }
 
@@ -244,6 +319,9 @@
 
 - (void)drawRect:(CGRect)rect {
     [super drawRect:rect];
+    
+    [self buildUI];
+    
     self.clipsToBounds = NO;
     if (self.drawSeparators) {
         

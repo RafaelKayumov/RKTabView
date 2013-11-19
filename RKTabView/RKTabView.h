@@ -1,7 +1,16 @@
 //  Created by Rafael Kayumov (RealPoc).
-//  Copyright (c) 2013 Rafael Kayumov. All rights reserved.
+//  Copyright (c) 2013 Rafael Kayumov. License: MIT.
 
 #import <UIKit/UIKit.h>
+
+typedef struct HorizontalEdgeInsets {
+    CGFloat left, right;
+} HorizontalEdgeInsets;
+
+static inline HorizontalEdgeInsets HorizontalEdgeInsetsMake (CGFloat left, CGFloat right) {
+    HorizontalEdgeInsets insets = {left, right};
+    return insets;
+}
 
 @class RKTabItem;
 @class RKTabView;
@@ -21,7 +30,13 @@
 @property (readwrite) BOOL darkensBackgroundForEnabledTabs;
 @property (readwrite) BOOL drawSeparators;
 
+@property (nonatomic, strong) UIColor *selectedTabBackgrondColor;
+@property (nonatomic, strong) UIFont *titlesFont;
+@property (nonatomic, strong) UIColor *titleColor;
+
 @property (nonatomic, strong) NSArray *tabItems;
+
+@property (nonatomic, readwrite) HorizontalEdgeInsets horizontalInsets;
 
 - (id)initWithFrame:(CGRect)frame andTabItems:(NSArray *)tabItems;
 

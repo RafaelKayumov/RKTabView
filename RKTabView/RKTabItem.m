@@ -1,5 +1,5 @@
 //  Created by Rafael Kayumov (RealPoc).
-//  Copyright (c) 2013 Rafael Kayumov. All rights reserved.
+//  Copyright (c) 2013 Rafael Kayumov. License: MIT.
 
 #import "RKTabItem.h"
 
