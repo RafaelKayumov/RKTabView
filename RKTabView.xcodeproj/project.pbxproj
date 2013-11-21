@@ -46,9 +46,6 @@
 		78A7C692183A05980075A7DD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78A7C691183A05980075A7DD /* Foundation.framework */; };
 		78A7C694183A05980075A7DD /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78A7C693183A05980075A7DD /* CoreGraphics.framework */; };
 		78A7C696183A05980075A7DD /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78A7C695183A05980075A7DD /* UIKit.framework */; };
-		78A7C6B1183A05980075A7DD /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78A7C6B0183A05980075A7DD /* XCTest.framework */; };
-		78A7C6B2183A05980075A7DD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78A7C691183A05980075A7DD /* Foundation.framework */; };
-		78A7C6B3183A05980075A7DD /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78A7C695183A05980075A7DD /* UIKit.framework */; };
 		78A7C6CA183A06B60075A7DD /* RKTabView.m in Sources */ = {isa = PBXBuildFile; fileRef = 78A7C6C6183A06B60075A7DD /* RKTabView.m */; };
 		78A7C6CB183A06B60075A7DD /* RKTabItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 78A7C6C8183A06B60075A7DD /* RKTabItem.m */; };
 		78A7C6DC183A06D80075A7DD /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 78A7C6CF183A06D70075A7DD /* InfoPlist.strings */; };
@@ -58,16 +55,6 @@
 		78A7C6F3183A07250075A7DD /* blurred_background.png in Resources */ = {isa = PBXBuildFile; fileRef = 78A7C6E2183A07250075A7DD /* blurred_background.png */; };
 		78A7C705183A0D430075A7DD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 78A7C704183A0D430075A7DD /* Main.storyboard */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		78A7C6B4183A05980075A7DD /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 78A7C686183A05980075A7DD /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 78A7C68D183A05980075A7DD;
-			remoteInfo = RKTabView;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		780B5268183BB63C0009D12A /* facebook@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "facebook@2x.png"; sourceTree = "<group>"; };
@@ -115,7 +102,6 @@
 		78A7C691183A05980075A7DD /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		78A7C693183A05980075A7DD /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		78A7C695183A05980075A7DD /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		78A7C6AF183A05980075A7DD /* RKTabViewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RKTabViewTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		78A7C6B0183A05980075A7DD /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		78A7C6C6183A06B60075A7DD /* RKTabView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RKTabView.m; sourceTree = "<group>"; };
 		78A7C6C7183A06B60075A7DD /* RKTabItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RKTabItem.h; sourceTree = "<group>"; };
@@ -140,16 +126,6 @@
 				78A7C694183A05980075A7DD /* CoreGraphics.framework in Frameworks */,
 				78A7C696183A05980075A7DD /* UIKit.framework in Frameworks */,
 				78A7C692183A05980075A7DD /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		78A7C6AC183A05980075A7DD /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				78A7C6B1183A05980075A7DD /* XCTest.framework in Frameworks */,
-				78A7C6B3183A05980075A7DD /* UIKit.framework in Frameworks */,
-				78A7C6B2183A05980075A7DD /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -231,7 +207,6 @@
 			isa = PBXGroup;
 			children = (
 				78A7C68E183A05980075A7DD /* RKTabView.app */,
-				78A7C6AF183A05980075A7DD /* RKTabViewTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -322,24 +297,6 @@
 			productReference = 78A7C68E183A05980075A7DD /* RKTabView.app */;
 			productType = "com.apple.product-type.application";
 		};
-		78A7C6AE183A05980075A7DD /* RKTabViewTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 78A7C6C3183A05980075A7DD /* Build configuration list for PBXNativeTarget "RKTabViewTests" */;
-			buildPhases = (
-				78A7C6AB183A05980075A7DD /* Sources */,
-				78A7C6AC183A05980075A7DD /* Frameworks */,
-				78A7C6AD183A05980075A7DD /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				78A7C6B5183A05980075A7DD /* PBXTargetDependency */,
-			);
-			name = RKTabViewTests;
-			productName = RKTabViewTests;
-			productReference = 78A7C6AF183A05980075A7DD /* RKTabViewTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -363,7 +320,6 @@
 			projectRoot = "";
 			targets = (
 				78A7C68D183A05980075A7DD /* RKTabView */,
-				78A7C6AE183A05980075A7DD /* RKTabViewTests */,
 			);
 		};
 /* End PBXProject section */
@@ -411,13 +367,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		78A7C6AD183A05980075A7DD /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -437,22 +386,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		78A7C6AB183A05980075A7DD /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		78A7C6B5183A05980075A7DD /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 78A7C68D183A05980075A7DD /* RKTabView */;
-			targetProxy = 78A7C6B4183A05980075A7DD /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		78A7C6CF183A06D70075A7DD /* InfoPlist.strings */ = {
@@ -562,42 +496,6 @@
 			};
 			name = Release;
 		};
-		78A7C6C4183A05980075A7DD /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "RKTabView/RKTabView-Prefix.pch";
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = "RKTabViewTests/RKTabViewTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				WRAPPER_EXTENSION = xctest;
-			};
-			name = Debug;
-		};
-		78A7C6C5183A05980075A7DD /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "RKTabView/RKTabView-Prefix.pch";
-				INFOPLIST_FILE = "RKTabViewTests/RKTabViewTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				WRAPPER_EXTENSION = xctest;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -615,15 +513,6 @@
 			buildConfigurations = (
 				78A7C6C1183A05980075A7DD /* Debug */,
 				78A7C6C2183A05980075A7DD /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		78A7C6C3183A05980075A7DD /* Build configuration list for PBXNativeTarget "RKTabViewTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				78A7C6C4183A05980075A7DD /* Debug */,
-				78A7C6C5183A05980075A7DD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
