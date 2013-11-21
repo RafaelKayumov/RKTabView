@@ -35,7 +35,7 @@
         tabItem.imageEnabled = imageEnabled;
         tabItem.imageDisabled = imageDisabled;
         tabItem.tabState = TabStateDisabled;
-        tabItem.tabType = TabTypeUnexludable;
+        tabItem.tabType = TabTypeUnexcludable;
     }
     return tabItem;
 }

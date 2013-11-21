@@ -19,7 +19,7 @@ static inline HorizontalEdgeInsets HorizontalEdgeInsetsMake (CGFloat left, CGFlo
 
 //Called for all types except TabTypeButton
 - (void)tabView:(RKTabView *)tabView tabBecameEnabledAtIndex:(int)index tab:(RKTabItem *)tabItem;
-//Called Only for unexludable items. (TabTypeUnexludable)
+//Called Only for unexcludable items. (TabTypeUnexcludable)
 - (void)tabView:(RKTabView *)tabView tabBecameDisabledAtIndex:(int)index tab:(RKTabItem *)tabItem;
 
 @end
