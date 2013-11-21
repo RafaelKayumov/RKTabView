@@ -1,22 +1,22 @@
 //  Created by Rafael Kayumov (RealPoc).
 //  Copyright (c) 2013 Rafael Kayumov. License: MIT.
 
-#import "UnexludableTabsExampleController.h"
+#import "UnexcludableTabsExampleController.h"
 
 #import "RKTabItem.h"
 #import "RKTabView.h"
 
-@interface UnexludableTabsExampleController () <RKTabViewDelegate>
+@interface UnexcludableTabsExampleController () <RKTabViewDelegate>
 @property (nonatomic, strong) IBOutlet RKTabView *unexcludableTabsView;
 @end
 
-@implementation UnexludableTabsExampleController
+@implementation UnexcludableTabsExampleController
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 	
-    self.title = @"Unexludable tabs view";
+    self.title = @"Unexcludable tabs view";
     
     RKTabItem *globeTabItem = [RKTabItem createUnexcludableItemWithImageEnabled:[UIImage imageNamed:@"globe_enabled"] imageDisabled:[UIImage imageNamed:@"globe_disabled"]];
     RKTabItem *cameraTabItem = [RKTabItem createUnexcludableItemWithImageEnabled:[UIImage imageNamed:@"camera_enabled"] imageDisabled:[UIImage imageNamed:@"camera_disabled"]];

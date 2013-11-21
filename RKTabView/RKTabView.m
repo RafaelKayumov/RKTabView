@@ -89,8 +89,8 @@
         case TabTypeButton:
             //Do nothing. It has own handler and it does not affect other tabs.
             break;
-        case TabTypeUnexludable:
-            //Don't exlude other tabs. Just turn this one on or off and send delegate invocation. Needs invocation for both cases on and off.
+        case TabTypeUnexcludable:
+            //Don't exclude other tabs. Just turn this one on or off and send delegate invocation. Needs invocation for both cases on and off.
             //Switch.
             [tabItem switchState];
             [self setTabContent:tabItem];
@@ -112,7 +112,7 @@
             [self setTabContent:tabItem];
             break;
         case TabTypeUsual:
-            //Exlude exludable items. Send delegate invocation.
+            //Exclude excludable items. Send delegate invocation.
             //Tab can we switched only if it's disabled. It can't be switched off by pressing on itself.
             if (tabItem.tabState == TabStateDisabled) {
                 //Switch it on.

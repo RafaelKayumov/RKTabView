@@ -31,7 +31,7 @@
     filtersTabItem.tabState = TabStateEnabled;
     
     RKTabItem *frameTabItem = [RKTabItem createUsualItemWithImageEnabled:[UIImage imageNamed:@"tab_frame_enabled"] imageDisabled:[UIImage imageNamed:@"tab_frame_disabled"]];
-    RKTabItem *rotateTabItem = [RKTabItem createUsualItemWithImageEnabled:[UIImage imageNamed:@"tab_rotate_disabled"] imageDisabled:[UIImage imageNamed:@"tab_rotate_disabled"]];
+    RKTabItem *rotateTabItem = [RKTabItem createUsualItemWithImageEnabled:[UIImage imageNamed:@"tab_rotate_enabled"] imageDisabled:[UIImage imageNamed:@"tab_rotate_disabled"]];
     RKTabItem *contrastTabItem = [RKTabItem createUsualItemWithImageEnabled:[UIImage imageNamed:@"tab_contrast_enabled"] imageDisabled:[UIImage imageNamed:@"tab_contrast_disabled"]];
     RKTabItem *brightnessTabItem = [RKTabItem createUsualItemWithImageEnabled:[UIImage imageNamed:@"tab_brightness_enabled"] imageDisabled:[UIImage imageNamed:@"tab_brightness_disabled"]];
     RKTabItem *blurTabItem = [RKTabItem createUsualItemWithImageEnabled:[UIImage imageNamed:@"tab_blur_enabled"] imageDisabled:[UIImage imageNamed:@"tab_blur_disabled"]];

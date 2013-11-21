@@ -3,6 +3,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface UnexludableTabsExampleController : UIViewController
+@interface UnexcludableTabsExampleController : UIViewController
 
 @end
