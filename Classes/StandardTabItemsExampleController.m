@@ -3,7 +3,6 @@
 
 #import "StandardTabItemsExampleController.h"
 
-#import "RKTabItem.h"
 #import "RKTabView.h"
 
 @interface StandardTabItemsExampleController () <RKTabViewDelegate>

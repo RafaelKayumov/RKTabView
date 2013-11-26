@@ -3,7 +3,6 @@
 
 #import "TitledItemsExampleController.h"
 
-#import "RKTabItem.h"
 #import "RKTabView.h"
 
 @interface TitledItemsExampleController () <RKTabViewDelegate>
@@ -19,21 +18,21 @@
     self.title = @"Titled tabs view";
     
     RKTabItem *mastercardTabItem = [RKTabItem createUsualItemWithImageEnabled:nil imageDisabled:[UIImage imageNamed:@"mastercard"]];
-    mastercardTabItem.title = @"MasterCard";
+    mastercardTabItem.titleString = @"MasterCard";
     RKTabItem *paypalTabItem = [RKTabItem createUsualItemWithImageEnabled:nil imageDisabled:[UIImage imageNamed:@"paypal"]];
-    paypalTabItem.title = @"PayPal";
+    paypalTabItem.titleString = @"PayPal";
     RKTabItem *visaTabItem = [RKTabItem createUsualItemWithImageEnabled:nil imageDisabled:[UIImage imageNamed:@"visa"]];
-    visaTabItem.title = @"Visa";
+    visaTabItem.titleString = @"Visa";
     RKTabItem *wuTabItem = [RKTabItem createUsualItemWithImageEnabled:nil imageDisabled:[UIImage imageNamed:@"wu"]];
-    wuTabItem.title = @"Western Union";
+    wuTabItem.titleString = @"Western Union";
     RKTabItem *wireTabItem = [RKTabItem createUsualItemWithImageEnabled:nil imageDisabled:[UIImage imageNamed:@"wire-transfer"]];
-    wireTabItem.title = @"Wire Transfer";
+    wireTabItem.titleString = @"Wire Transfer";
     
     //mastercardTabItem.tabState = TabStateEnabled;
     
     self.titledTabsView.darkensBackgroundForEnabledTabs = YES;
     self.titledTabsView.horizontalInsets = HorizontalEdgeInsetsMake(25, 25);
-    self.titledTabsView.titleColor = [UIColor colorWithWhite:0.9f alpha:0.8f];
+    self.titledTabsView.titlesFontColor = [UIColor colorWithWhite:0.9f alpha:0.8f];
     
     self.titledTabsView.tabItems = @[mastercardTabItem, paypalTabItem, visaTabItem, wuTabItem, wireTabItem];
 }

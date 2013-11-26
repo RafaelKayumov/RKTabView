@@ -2,6 +2,7 @@
 //  Copyright (c) 2013 Rafael Kayumov. License: MIT.
 
 #import <UIKit/UIKit.h>
+#import "RKTabItem.h"
 
 typedef struct HorizontalEdgeInsets {
     CGFloat left, right;
@@ -29,13 +30,10 @@ static inline HorizontalEdgeInsets HorizontalEdgeInsetsMake (CGFloat left, CGFlo
 @property (nonatomic, assign) IBOutlet id<RKTabViewDelegate> delegate;
 @property (readwrite) BOOL darkensBackgroundForEnabledTabs;
 @property (readwrite) BOOL drawSeparators;
-
-@property (nonatomic, strong) UIColor *selectedTabBackgrondColor;
+@property (nonatomic, strong) UIColor *enabledTabBackgrondColor;
 @property (nonatomic, strong) UIFont *titlesFont;
-@property (nonatomic, strong) UIColor *titleColor;
-
+@property (nonatomic, strong) UIColor *titlesFontColor;
 @property (nonatomic, strong) NSArray *tabItems;
-
 @property (nonatomic, readwrite) HorizontalEdgeInsets horizontalInsets;
 
 - (id)initWithFrame:(CGRect)frame andTabItems:(NSArray *)tabItems;

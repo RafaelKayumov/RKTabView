@@ -18,16 +18,13 @@ typedef enum {
 
 @property (readwrite) TabState tabState;
 @property (readonly) TabType tabType;
-
 @property (nonatomic, assign, readonly) id target;
 @property (readonly) SEL selector;
-
-@property (nonatomic, strong) UIColor *selectedBackgroundColor;
+@property (nonatomic, strong) UIColor *enabledBackgroundColor;
 @property (nonatomic, strong) UIColor *backgroundColor;
-@property (nonatomic, strong) NSString *title;
-@property (nonatomic, strong) UIFont *font;
-@property (nonatomic, strong) UIColor *titleColor;
-
+@property (nonatomic, strong) NSString *titleString;
+@property (nonatomic, strong) UIFont *titleFont;
+@property (nonatomic, strong) UIColor *titleFontColor;
 @property (nonatomic, strong, readonly) UIImage *imageForCurrentState;
 
 + (RKTabItem *)createUsualItemWithImageEnabled:(UIImage *)imageEnabled

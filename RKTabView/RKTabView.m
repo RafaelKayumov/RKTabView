@@ -57,11 +57,11 @@
     return _titlesFont;
 }
 
-- (UIColor *)titleColor {
-    if (!_titleColor) {
-        _titleColor = [UIColor lightGrayColor];
+- (UIColor *)titlesFontColor {
+    if (!_titlesFontColor) {
+        _titlesFontColor = [UIColor lightGrayColor];
     }
-    return _titleColor;
+    return _titlesFontColor;
 }
 
 #pragma mark - Private
@@ -190,7 +190,7 @@
     //Title
     UILabel *titleLabel = nil;
     CGSize titleSize;
-    if (tabItem.title.length != 0) {
+    if (tabItem.titleString.length != 0) {
         titleLabel = [[UILabel alloc] init];
         titleLabel.numberOfLines = 2;
         titleLabel.lineBreakMode = NSLineBreakByWordWrapping;
@@ -199,23 +199,23 @@
         titleLabel.autoresizingMask = UIViewAutoresizingFlexibleRightMargin | UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleWidth;
         
         UIFont *font = nil;
-        if (tabItem.font) {
-            font = tabItem.font;
-        } else if (!tabItem.font && self.titlesFont) {
+        if (tabItem.titleFont) {
+            font = tabItem.titleFont;
+        } else if (!tabItem.titleFont && self.titlesFont) {
             font = self.titlesFont;
         }
         titleLabel.font = font;
         
         UIColor *textColor = nil;
-        if (tabItem.titleColor) {
-            textColor = tabItem.titleColor;
-        } else if (!tabItem.titleColor && self.titleColor) {
-            textColor = self.titleColor;
+        if (tabItem.titleFontColor) {
+            textColor = tabItem.titleFontColor;
+        } else if (!tabItem.titleFontColor && self.titlesFontColor) {
+            textColor = self.titlesFontColor;
         }
         titleLabel.textColor = textColor;
         
-        titleSize = [tabItem.title sizeWithFont:titleLabel.font constrainedToSize:CGSizeMake(tab.bounds.size.width, MAXFLOAT) lineBreakMode:NSLineBreakByWordWrapping];
-        titleLabel.text = tabItem.title;
+        titleSize = [tabItem.titleString sizeWithFont:titleLabel.font constrainedToSize:CGSizeMake(tab.bounds.size.width, MAXFLOAT) lineBreakMode:NSLineBreakByWordWrapping];
+        titleLabel.text = tabItem.titleString;
     }
     
     //Image/button
@@ -255,10 +255,10 @@
     if (tabItem.tabState == TabStateEnabled) {
         
         //Apply tabItem selecred background color. If it is nil then apply tabview selected background color (if not nil).
-        if (tabItem.selectedBackgroundColor) {
-            tab.backgroundColor = tabItem.selectedBackgroundColor;
-        } else if (!tabItem.selectedBackgroundColor && self.selectedTabBackgrondColor) {
-            tab.backgroundColor = self.selectedTabBackgrondColor;
+        if (tabItem.enabledBackgroundColor) {
+            tab.backgroundColor = tabItem.enabledBackgroundColor;
+        } else if (!tabItem.enabledBackgroundColor && self.enabledTabBackgrondColor) {
+            tab.backgroundColor = self.enabledTabBackgrondColor;
         }
     } else {
         tab.backgroundColor = [UIColor clearColor];

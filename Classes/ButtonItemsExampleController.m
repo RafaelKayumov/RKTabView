@@ -3,7 +3,6 @@
 
 #import "ButtonItemsExampleController.h"
 
-#import "RKTabItem.h"
 #import "RKTabView.h"
 
 @interface ButtonItemsExampleController ()

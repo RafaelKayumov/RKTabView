@@ -3,7 +3,6 @@
 
 #import "UnexcludableTabsExampleController.h"
 
-#import "RKTabItem.h"
 #import "RKTabView.h"
 
 @interface UnexcludableTabsExampleController () <RKTabViewDelegate>
@@ -26,7 +25,7 @@
     
     self.unexcludableTabsView.horizontalInsets = HorizontalEdgeInsetsMake(40, 40);
     
-    self.unexcludableTabsView.selectedTabBackgrondColor = [UIColor colorWithRed:103.0f/256.0f green:87.0f/256.0f blue:226.0f/256.0f alpha:0.5];
+    self.unexcludableTabsView.enabledTabBackgrondColor = [UIColor colorWithRed:103.0f/256.0f green:87.0f/256.0f blue:226.0f/256.0f alpha:0.5];
     self.unexcludableTabsView.tabItems = @[globeTabItem, cameraTabItem, cloudTabItem, userTabItem, watchTabItem];
 }
 
