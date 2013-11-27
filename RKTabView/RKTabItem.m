@@ -28,6 +28,18 @@
     return tabItem;
 }
 
++ (RKTabItem *)createExcludableItemWithImageEnabled:(UIImage *)imageEnabled
+                                        imageDisabled:(UIImage *)imageDisabled {
+    RKTabItem *tabItem = [[RKTabItem alloc] init];
+    if (tabItem) {
+        tabItem.imageEnabled = imageEnabled;
+        tabItem.imageDisabled = imageDisabled;
+        tabItem.tabState = TabStateDisabled;
+        tabItem.tabType = TabTypeExcludable;
+    }
+    return tabItem;
+}
+
 + (RKTabItem *)createUnexcludableItemWithImageEnabled:(UIImage *)imageEnabled
                              imageDisabled:(UIImage *)imageDisabled {
     RKTabItem *tabItem = [[RKTabItem alloc] init];

@@ -119,7 +119,7 @@
                 [tabItem switchState];
                 //Switch down other excludable items.
                 for (RKTabItem *item in self.tabItems) {
-                    if (item != tabItem && item.tabType == TabTypeUsual) {
+                    if (item != tabItem && (item.tabType == TabTypeUsual || item.tabType == TabTypeExcludable)) {
                         item.tabState = TabStateDisabled;
                         [self setTabContent:item];
                     }
@@ -128,6 +128,37 @@
                 if (self.delegate) {
                     if ([self delegateRespondsToEnableSelector]) {
                         [self.delegate tabView:self tabBecameEnabledAtIndex:[self indexOfTab:tabItem] tab:tabItem];
+                    }
+                }
+            }
+            [self setTabContent:tabItem];
+            break;
+        case TabTypeExcludable:
+            //Exclude excludable items. Send delegate invocation.
+            //Unlike usual item, can be switched off by pressing on itself when enabled.
+            if (tabItem.tabState == TabStateDisabled) {
+                //Switch it on.
+                [tabItem switchState];
+                //Switch down other excludable items.
+                for (RKTabItem *item in self.tabItems) {
+                    if (item != tabItem && (item.tabType == TabTypeUsual || item.tabType == TabTypeExcludable)) {
+                        item.tabState = TabStateDisabled;
+                        [self setTabContent:item];
+                    }
+                }
+                //Call delegate method.
+                if (self.delegate) {
+                    if ([self delegateRespondsToEnableSelector]) {
+                        [self.delegate tabView:self tabBecameEnabledAtIndex:[self indexOfTab:tabItem] tab:tabItem];
+                    }
+                }
+            } else if (tabItem.tabState == TabStateEnabled) {
+                [tabItem switchState];
+                
+                //Call delegate method.
+                if (self.delegate) {
+                    if ([self delegateRespondsToDisableSelector]) {
+                        [self.delegate tabView:self tabBecameDisabledAtIndex:[self indexOfTab:tabItem] tab:tabItem];
                     }
                 }
             }

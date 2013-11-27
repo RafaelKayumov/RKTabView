@@ -11,7 +11,8 @@ typedef enum {
 typedef enum {
     TabTypeUsual,
     TabTypeButton,
-    TabTypeUnexcludable
+    TabTypeUnexcludable,
+    TabTypeExcludable
 } TabType;
 
 @interface RKTabItem : NSObject
@@ -29,6 +30,9 @@ typedef enum {
 
 + (RKTabItem *)createUsualItemWithImageEnabled:(UIImage *)imageEnabled
                                imageDisabled:(UIImage *)imageDisabled;
+
++ (RKTabItem *)createExcludableItemWithImageEnabled:(UIImage *)imageEnabled
+                                        imageDisabled:(UIImage *)imageDisabled;
 
 + (RKTabItem *)createUnexcludableItemWithImageEnabled:(UIImage *)imageEnabled
                                imageDisabled:(UIImage *)imageDisabled;
