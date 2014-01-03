@@ -213,6 +213,7 @@
             textColor = self.titlesFontColor;
         }
         titleLabel.textColor = textColor;
+        titleLabel.backgroundColor = [UIColor clearColor];
         
         titleSize = [tabItem.titleString sizeWithFont:titleLabel.font constrainedToSize:CGSizeMake(tab.bounds.size.width, MAXFLOAT) lineBreakMode:NSLineBreakByWordWrapping];
         titleLabel.text = tabItem.titleString;
