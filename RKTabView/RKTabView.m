@@ -262,7 +262,7 @@
             tab.backgroundColor = self.enabledTabBackgrondColor;
         }
     } else {
-        tab.backgroundColor = [UIColor clearColor];
+        tab.backgroundColor = tabItem.backgroundColor;
     }
 }
 
