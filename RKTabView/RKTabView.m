@@ -97,7 +97,15 @@
     }
 }
 
-- (void)swtichTab:(RKTabItem *)tabItem {
+- (void)switchTabIndex:(NSUInteger)index
+{
+    if (index < self.tabItems.count) {
+        RKTabItem *tabItem = self.tabItems[index];
+        [self switchTab:tabItem notify:NO];
+    }
+}
+
+- (void)switchTab:(RKTabItem *)tabItem notify:(BOOL)notify {
     switch (tabItem.tabType) {
         case TabTypeButton:
             //Do nothing. It has own handler and it does not affect other tabs.
@@ -111,12 +119,12 @@
             if (self.delegate) {
                 switch (tabItem.tabState) {
                     case TabStateDisabled:
-                        if ([self delegateRespondsToDisableSelector]) {
+                        if ([self delegateRespondsToDisableSelector] && notify) {
                             [self.delegate tabView:self tabBecameDisabledAtIndex:[self indexOfTab:tabItem] tab:tabItem];
                         }
                         break;
                     case TabStateEnabled:
-                        if ([self delegateRespondsToEnableSelector]) {
+                        if ([self delegateRespondsToEnableSelector] && notify) {
                             [self.delegate tabView:self tabBecameEnabledAtIndex:[self indexOfTab:tabItem] tab:tabItem];
                         }
                         break;
@@ -139,7 +147,7 @@
                 }
                 //Call delegate method.
                 if (self.delegate) {
-                    if ([self delegateRespondsToEnableSelector]) {
+                    if ([self delegateRespondsToEnableSelector] && notify) {
                         [self.delegate tabView:self tabBecameEnabledAtIndex:[self indexOfTab:tabItem] tab:tabItem];
                     }
                 }
@@ -154,7 +162,7 @@
 - (void)pressedTab:(id)sender {
     UIControl *tabView = (UIControl *)sender;
     RKTabItem *tabItem = [self tabItemForTab:tabView];
-    [self swtichTab:tabItem];
+    [self switchTab:tabItem notify:YES];
 }
 
 #pragma mark - Helper methods
