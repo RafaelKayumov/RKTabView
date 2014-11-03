@@ -220,7 +220,11 @@
         titleLabel.font = font;
         
         UIColor *textColor = nil;
-        if (tabItem.titleFontColor) {
+        if (tabItem.tabState == TabStateEnabled && tabItem.titleFontColorEnabled) {
+            textColor = tabItem.titleFontColorEnabled;
+        } else if (tabItem.tabState == TabStateEnabled && self.titlesFontColorEnabled) {
+            textColor = self.titlesFontColorEnabled;
+        } else if (tabItem.titleFontColor) {
             textColor = tabItem.titleFontColor;
         } else if (!tabItem.titleFontColor && self.titlesFontColor) {
             textColor = self.titlesFontColor;

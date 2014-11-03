@@ -25,6 +25,7 @@ typedef enum {
 @property (nonatomic, strong) NSString *titleString;
 @property (nonatomic, strong) UIFont *titleFont;
 @property (nonatomic, strong) UIColor *titleFontColor;
+@property (nonatomic, strong) UIColor *titleFontColorEnabled;
 @property (nonatomic, strong, readonly) UIImage *imageForCurrentState;
 
 + (RKTabItem *)createUsualItemWithImageEnabled:(UIImage *)imageEnabled
