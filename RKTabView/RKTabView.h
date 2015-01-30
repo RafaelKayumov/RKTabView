@@ -33,6 +33,7 @@ static inline HorizontalEdgeInsets HorizontalEdgeInsetsMake (CGFloat left, CGFlo
 @property (nonatomic, strong) UIColor *enabledTabBackgrondColor;
 @property (nonatomic, strong) UIFont *titlesFont;
 @property (nonatomic, strong) UIColor *titlesFontColor;
+@property (nonatomic, strong) UIColor *titlesFontColorEnabled;
 @property (nonatomic, strong) NSArray *tabItems;
 @property (nonatomic, readwrite) HorizontalEdgeInsets horizontalInsets;
 
