@@ -39,6 +39,7 @@ static inline HorizontalEdgeInsets HorizontalEdgeInsetsMake (CGFloat left, CGFlo
 
 - (id)initWithFrame:(CGRect)frame andTabItems:(NSArray *)tabItems;
 
+- (void)switchTabIndex:(NSUInteger)index;
 - (RKTabItem *)selectedTabItem;
 
 @end
