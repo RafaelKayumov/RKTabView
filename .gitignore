@@ -17,11 +17,15 @@ CVS
 *.log
 *~.nib
 *.moved-aside
-*.xcodeproj/*
+
+*.xcodeproj/
 !*.xcodeproj/project.pbxproj
-*.xcworkspace/*
+
+*.xcodeproj/project.xcworkspace/
+!*.xcodeproj/project.xcworkspace/contents.xcworkspacedata
+
+*.xcworkspace/
 !*.xcworkspace/contents.xcworkspacedata
-!xcshareddata
 
 #Project files
 [Bb]uild/
