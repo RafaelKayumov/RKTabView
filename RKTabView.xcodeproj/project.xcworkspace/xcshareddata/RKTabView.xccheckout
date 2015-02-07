@@ -10,29 +10,29 @@
 	<string>RKTabView</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>1432281D-FF70-4F4C-A9A2-C5E7B0715663</key>
+		<key>CA68BFA947ECFBE664315D54DAC5501371549A60</key>
 		<string>https://github.com/RafaelKayumov/RKTabView.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>RKTabView.xcodeproj/project.xcworkspace</string>
+	<string>RKTabView.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>1432281D-FF70-4F4C-A9A2-C5E7B0715663</key>
+		<key>CA68BFA947ECFBE664315D54DAC5501371549A60</key>
 		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>https://github.com/RafaelKayumov/RKTabView.git</string>
 	<key>IDESourceControlProjectVersion</key>
-	<integer>110</integer>
+	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>1432281D-FF70-4F4C-A9A2-C5E7B0715663</string>
+	<string>CA68BFA947ECFBE664315D54DAC5501371549A60</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>1432281D-FF70-4F4C-A9A2-C5E7B0715663</string>
+			<string>CA68BFA947ECFBE664315D54DAC5501371549A60</string>
 			<key>IDESourceControlWCCName</key>
 			<string>RKTabView</string>
 		</dict>

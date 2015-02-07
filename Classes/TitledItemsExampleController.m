@@ -39,12 +39,12 @@
 
 #pragma mark - RKTabViewDelegate
 
-- (void)tabView:(RKTabView *)tabView tabBecameEnabledAtIndex:(int)index tab:(RKTabItem *)tabItem {
-    NSLog(@"Tab № %d became enabled on tab view", index);
+- (void)tabView:(RKTabView *)tabView tabBecameEnabledAtIndex:(NSUInteger)index tab:(RKTabItem *)tabItem {
+    NSLog(@"Tab № %tu became enabled on tab view", index);
 }
 
-- (void)tabView:(RKTabView *)tabView tabBecameDisabledAtIndex:(int)index tab:(RKTabItem *)tabItem {
-    NSLog(@"Tab № %d became disabled on tab view", index);
+- (void)tabView:(RKTabView *)tabView tabBecameDisabledAtIndex:(NSUInteger)index tab:(RKTabItem *)tabItem {
+    NSLog(@"Tab № %tu became disabled on tab view", index);
 }
 
 @end

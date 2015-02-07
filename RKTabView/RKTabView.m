@@ -34,7 +34,7 @@
 #pragma mark - Properties
 
 - (RKTabItem *)selectedTabItem {
-  int selectedIndex = [self.tabItems indexOfObjectPassingTest:^BOOL(RKTabItem *obj, NSUInteger idx, BOOL *stop) {
+  NSUInteger selectedIndex = [self.tabItems indexOfObjectPassingTest:^BOOL(RKTabItem *obj, NSUInteger idx, BOOL *stop) {
     return obj.tabState == TabStateEnabled;
   }];
   
@@ -168,7 +168,7 @@
 #pragma mark - Helper methods
 
 - (UIControl *)existingTabForTabItem:(RKTabItem *)tabItem {
-    int index = [self indexOfTab:tabItem];
+    NSUInteger index = [self indexOfTab:tabItem];
     if (index != NSNotFound && self.tabViews.count > index) {
         return self.tabViews[[self indexOfTab:tabItem]];
     } else {
@@ -185,7 +185,7 @@
     return self.frame.size.height;
 }
 
-- (int)indexOfTab:(RKTabItem *)tabItem {
+- (NSUInteger)indexOfTab:(RKTabItem *)tabItem {
     return [self.tabItems indexOfObject:tabItem];
 }
 
