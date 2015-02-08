@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "RKTabView"
-  s.version      = "1.0.1"
+  s.version      = "1.0.2"
   s.summary      = "Easy applicable toolbar/tabbar component for iOS."
   s.homepage     = "https://github.com/RafaelKayumov/RKTabView"
   s.license      = { :type => 'MIT', :file => 'LICENSE' }
