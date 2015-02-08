@@ -20,8 +20,14 @@
     
     [imageView setTranslatesAutoresizingMaskIntoConstraints:NO];
     NSDictionary *views = @{@"background" : imageView};
-    NSArray *horizontalConstraints = [NSLayoutConstraint constraintsWithVisualFormat:@"V:|[background]|" options:0 metrics:nil views:views];
-    NSArray *verticalConstraints = [NSLayoutConstraint constraintsWithVisualFormat:@"H:|[background]|" options:0 metrics:nil views:views];
+    NSArray *horizontalConstraints = [NSLayoutConstraint constraintsWithVisualFormat:@"H:|[background]|"
+                                                                             options:0
+                                                                             metrics:nil
+                                                                               views:views];
+    NSArray *verticalConstraints = [NSLayoutConstraint constraintsWithVisualFormat:@"V:|[background]|"
+                                                                           options:0
+                                                                           metrics:nil
+                                                                             views:views];
     [keyWindow addConstraints:horizontalConstraints];
     [keyWindow addConstraints:verticalConstraints];
     
