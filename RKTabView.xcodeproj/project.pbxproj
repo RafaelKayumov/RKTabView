@@ -43,6 +43,7 @@
 		780B52B3183BDAFC0009D12A /* visa@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 780B52B2183BDAFC0009D12A /* visa@2x.png */; };
 		780B52B5183BDB060009D12A /* wu@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 780B52B4183BDB060009D12A /* wu@2x.png */; };
 		780B52B7183BDB120009D12A /* wire-transfer@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 780B52B6183BDB120009D12A /* wire-transfer@2x.png */; };
+		782ABADB1A877B8600D570AD /* CodeExampleController.m in Sources */ = {isa = PBXBuildFile; fileRef = 782ABADA1A877B8600D570AD /* CodeExampleController.m */; };
 		78A7C692183A05980075A7DD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78A7C691183A05980075A7DD /* Foundation.framework */; };
 		78A7C694183A05980075A7DD /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78A7C693183A05980075A7DD /* CoreGraphics.framework */; };
 		78A7C696183A05980075A7DD /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78A7C695183A05980075A7DD /* UIKit.framework */; };
@@ -98,6 +99,8 @@
 		780B52B2183BDAFC0009D12A /* visa@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "visa@2x.png"; sourceTree = "<group>"; };
 		780B52B4183BDB060009D12A /* wu@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "wu@2x.png"; sourceTree = "<group>"; };
 		780B52B6183BDB120009D12A /* wire-transfer@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "wire-transfer@2x.png"; sourceTree = "<group>"; };
+		782ABAD91A877B8600D570AD /* CodeExampleController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CodeExampleController.h; sourceTree = "<group>"; };
+		782ABADA1A877B8600D570AD /* CodeExampleController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CodeExampleController.m; sourceTree = "<group>"; };
 		78A7C68E183A05980075A7DD /* RKTabView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RKTabView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		78A7C691183A05980075A7DD /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		78A7C693183A05980075A7DD /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -261,6 +264,8 @@
 				780B5298183BCB0B0009D12A /* UnexcludableTabsExampleController.m */,
 				780B52AB183BD9220009D12A /* TitledItemsExampleController.h */,
 				780B52AC183BD9220009D12A /* TitledItemsExampleController.m */,
+				782ABAD91A877B8600D570AD /* CodeExampleController.h */,
+				782ABADA1A877B8600D570AD /* CodeExampleController.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -383,6 +388,7 @@
 				78A7C6DE183A06D80075A7DD /* main.m in Sources */,
 				78A7C6CB183A06B60075A7DD /* RKTabItem.m in Sources */,
 				780B5275183BBCD60009D12A /* TableViewController.m in Sources */,
+				782ABADB1A877B8600D570AD /* CodeExampleController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -431,7 +437,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 			};
@@ -462,7 +468,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -476,8 +482,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Supporting files/RKTabView-Prefix.pch";
 				INFOPLIST_FILE = "$(SRCROOT)/Supporting files/RKTabView-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -490,8 +497,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Supporting files/RKTabView-Prefix.pch";
 				INFOPLIST_FILE = "$(SRCROOT)/Supporting files/RKTabView-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
