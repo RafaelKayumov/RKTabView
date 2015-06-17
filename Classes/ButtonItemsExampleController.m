@@ -23,7 +23,11 @@
     RKTabItem *twitter = [RKTabItem createButtonItemWithImage:[UIImage imageNamed:@"flickr"] target:self selector:@selector(buttonTabPressed:)];
     
     self.tabViewSocial.horizontalInsets = HorizontalEdgeInsetsMake(70, 70);
+
     self.tabViewSocial.drawSeparators = YES;
+    self.tabViewSocial.upperSeparatorLineColor = [UIColor colorWithWhite:0.0 alpha:0.2f];
+    self.tabViewSocial.lowerSeparatorLineColor = [UIColor colorWithWhite:0.5 alpha:0.6f];
+    
     [self.tabViewSocial setTabItems:@[tabItemGooglePlus, facebook, flickr, twitter]];
 }
 

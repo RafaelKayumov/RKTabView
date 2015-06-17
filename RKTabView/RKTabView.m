@@ -77,6 +77,20 @@
     return _titlesFontColor;
 }
 
+- (UIColor *)lowerSeparatorLineColor {
+    if (!_lowerSeparatorLineColor) {
+        _lowerSeparatorLineColor = [UIColor colorWithWhite:0.5 alpha:0.4f];
+    }
+    return _lowerSeparatorLineColor;
+}
+
+- (UIColor *)upperSeparatorLineColor {
+    if (!_upperSeparatorLineColor) {
+        _upperSeparatorLineColor = [UIColor colorWithWhite:0.0 alpha:0.4f];
+    }
+    return _upperSeparatorLineColor;
+}
+
 #pragma mark - Private
 
 - (void)cleanTabView {
@@ -349,33 +363,32 @@
     [self buildUI];
     
     self.clipsToBounds = NO;
-    if (self.drawSeparators) {
+    if (self.drawSeparators &&
+        self.upperSeparatorLineColor &&
+        self.lowerSeparatorLineColor) {
         
-        CGFloat darkLineWidth = 0.5f;
-        CGFloat lightLineWidth = 0.5f;
+        CGFloat upperLineWidth = 0.5f;
+        CGFloat lowerLineWidth = 0.5f;
         
-        UIColor *darkLineColor = [UIColor colorWithWhite:0.0f alpha:0.4f];
-        UIColor *lightLineColor = [UIColor colorWithWhite:0.5 alpha:0.4f];
+        [self draWLineFromPoint:CGPointMake(0, upperLineWidth/2)
+                        toPoint:CGPointMake(self.bounds.size.width, upperLineWidth/2)
+                      withColor:_upperSeparatorLineColor
+                          width:upperLineWidth];
         
-        [self draWLineFromPoint:CGPointMake(0, darkLineWidth/2)
-                        toPoint:CGPointMake(self.bounds.size.width, darkLineWidth/2)
-                      withColor:darkLineColor
-                          width:darkLineWidth];
+        [self draWLineFromPoint:CGPointMake(0, upperLineWidth + lowerLineWidth/2)
+                        toPoint:CGPointMake(self.bounds.size.width, upperLineWidth + lowerLineWidth/2)
+                      withColor:_lowerSeparatorLineColor
+                          width:lowerLineWidth];
         
-        [self draWLineFromPoint:CGPointMake(0, darkLineWidth + lightLineWidth/2)
-                        toPoint:CGPointMake(self.bounds.size.width, darkLineWidth + lightLineWidth/2)
-                      withColor:lightLineColor
-                          width:lightLineWidth];
+        [self draWLineFromPoint:CGPointMake(0, self.bounds.size.height - upperLineWidth/2 - lowerLineWidth)
+                        toPoint:CGPointMake(self.bounds.size.width, self.bounds.size.height - upperLineWidth/2 - lowerLineWidth)
+                      withColor:_upperSeparatorLineColor
+                          width:upperLineWidth];
         
-        [self draWLineFromPoint:CGPointMake(0, self.bounds.size.height - darkLineWidth/2 - lightLineWidth)
-                        toPoint:CGPointMake(self.bounds.size.width, self.bounds.size.height - darkLineWidth/2 - lightLineWidth)
-                      withColor:darkLineColor
-                          width:darkLineWidth];
-        
-        [self draWLineFromPoint:CGPointMake(0, self.bounds.size.height - lightLineWidth/2)
-                        toPoint:CGPointMake(self.bounds.size.width, self.bounds.size.height - lightLineWidth/2)
-                      withColor:lightLineColor
-                          width:lightLineWidth];
+        [self draWLineFromPoint:CGPointMake(0, self.bounds.size.height - lowerLineWidth/2)
+                        toPoint:CGPointMake(self.bounds.size.width, self.bounds.size.height - lowerLineWidth/2)
+                      withColor:_lowerSeparatorLineColor
+                          width:lowerLineWidth];
     }
 }
 

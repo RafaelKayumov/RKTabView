@@ -30,6 +30,8 @@ static inline HorizontalEdgeInsets HorizontalEdgeInsetsMake (CGFloat left, CGFlo
 @property (nonatomic, assign) IBOutlet id<RKTabViewDelegate> delegate;
 @property (readwrite) BOOL darkensBackgroundForEnabledTabs;
 @property (readwrite) BOOL drawSeparators;
+@property (nonatomic, strong) UIColor *lowerSeparatorLineColor;
+@property (nonatomic, strong) UIColor *upperSeparatorLineColor;
 @property (nonatomic, strong) UIColor *enabledTabBackgrondColor;
 @property (nonatomic, strong) UIFont *titlesFont;
 @property (nonatomic, strong) UIColor *titlesFontColor;
