@@ -11,7 +11,8 @@ typedef enum {
 typedef enum {
     TabTypeUsual,
     TabTypeButton,
-    TabTypeUnexcludable
+    TabTypeUnexcludable,
+    TabTypeCustomGesture
 } TabType;
 
 @interface RKTabItem : NSObject
@@ -37,6 +38,9 @@ typedef enum {
 + (RKTabItem *)createButtonItemWithImage:(UIImage *)image
                          target:(id)target
                        selector:(SEL)selector;
+
++ (RKTabItem *)createItemWithImage:(UIImage *)image
+                           gesture:(UIGestureRecognizer *)gesture;
 
 - (void)switchState;
 

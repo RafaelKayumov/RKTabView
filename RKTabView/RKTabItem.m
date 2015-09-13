@@ -12,6 +12,8 @@
 @property (nonatomic, strong) UIImage *imageDisabled;
 @property (readwrite) TabType tabType;
 
+@property (nonatomic, strong) UIGestureRecognizer *gesture;
+
 @end
 
 @implementation RKTabItem
@@ -49,6 +51,17 @@
         tabItem.tabType = TabTypeButton;
         tabItem.target = target;
         tabItem.selector = selector;
+    }
+    return tabItem;
+}
+
++ (RKTabItem *)createItemWithImage:(UIImage *)image
+                           gesture:(UIGestureRecognizer *)gesture {
+    RKTabItem *tabItem = [[RKTabItem alloc] init];
+    if (tabItem) {
+        tabItem.imageEnabled = image;
+        tabItem.tabType = TabTypeCustomGesture;
+        tabItem.gesture = gesture;
     }
     return tabItem;
 }
