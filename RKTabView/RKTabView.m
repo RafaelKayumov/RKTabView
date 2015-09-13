@@ -12,6 +12,12 @@
 
 @end
 
+@interface RKTabItem ()
+
+@property (nonatomic, copy) UIGestureRecognizer *gesture;
+
+@end
+
 @implementation RKTabView
 
 - (id)initWithFrame:(CGRect)frame andTabItems:(NSArray *)tabItems {
@@ -123,6 +129,9 @@
     switch (tabItem.tabType) {
         case TabTypeButton:
             //Do nothing. It has own handler and it does not affect other tabs.
+            break;
+        case TabTypeCustomGesture:
+            //same as for TabTypeButton:
             break;
         case TabTypeUnexcludable:
             //Don't exclude other tabs. Just turn this one on or off and send delegate invocation. Needs invocation for both cases on and off.
@@ -265,6 +274,12 @@
         interfaceElement = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, tabItem.imageForCurrentState.size.width, tabItem.imageForCurrentState.size.height)];
         [((UIButton *)interfaceElement) setImage:tabItem.imageForCurrentState forState:UIControlStateNormal];
         [((UIButton *)interfaceElement) addTarget:tabItem.target action:tabItem.selector forControlEvents:UIControlEventTouchUpInside];
+    } else if (tabItem.tabType == TabTypeCustomGesture) {
+        interfaceElement = [[UIImageView alloc] init];
+        ((UIImageView *)interfaceElement).userInteractionEnabled = YES;
+        [(UIImageView *)interfaceElement setImage:tabItem.imageForCurrentState];
+        ((UIImageView *)interfaceElement).frame = CGRectMake(0, 0, tabItem.imageForCurrentState.size.width, tabItem.imageForCurrentState.size.height);
+        [interfaceElement addGestureRecognizer:tabItem.gesture];
     } else {
         interfaceElement = [[UIImageView alloc] initWithImage:tabItem.imageForCurrentState];
     }
