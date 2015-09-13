@@ -275,8 +275,10 @@
         [((UIButton *)interfaceElement) setImage:tabItem.imageForCurrentState forState:UIControlStateNormal];
         [((UIButton *)interfaceElement) addTarget:tabItem.target action:tabItem.selector forControlEvents:UIControlEventTouchUpInside];
     } else if (tabItem.tabType == TabTypeCustomGesture) {
-        interfaceElement = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, tabItem.imageForCurrentState.size.width, tabItem.imageForCurrentState.size.height)];
-        [((UIButton *)interfaceElement) setImage:tabItem.imageForCurrentState forState:UIControlStateNormal];
+        interfaceElement = [[UIImageView alloc] init];
+        ((UIImageView *)interfaceElement).userInteractionEnabled = YES;
+        [(UIImageView *)interfaceElement setImage:tabItem.imageForCurrentState];
+        ((UIImageView *)interfaceElement).frame = CGRectMake(0, 0, tabItem.imageForCurrentState.size.width, tabItem.imageForCurrentState.size.height);
         [interfaceElement addGestureRecognizer:tabItem.gesture];
     } else {
         interfaceElement = [[UIImageView alloc] initWithImage:tabItem.imageForCurrentState];
